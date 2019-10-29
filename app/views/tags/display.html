@@ -29,14 +29,16 @@
 		</h3>
 		#{list items:_post.comments, as:'comment'}
 			<div class="comment">
-				<span class="comment-author">by ${comment.author},</span>
-				<span class="comment-data">
-					${comment.postedAt.format('dd MMM yy')}
-				</span>
-			</div>
-			<div class="comment-content">
-				<div class="about">Detail: </div>
-				${comment.content.escape().nl2br()}
+				<div class="comment-metadata">
+					<span class="comment-author">by ${comment.author},</span>
+					<span class="comment-date">
+						${comment.postedAt.format('dd MMM yy')}
+					</span>
+				</div>
+				<div class="comment-content">
+					<div class="about">Detail: </div>
+					${comment.content.escape().nl2br()}
+				</div>
 			</div>
 		#{/list}
 	</div>
