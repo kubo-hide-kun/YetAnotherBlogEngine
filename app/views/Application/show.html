@@ -1,6 +1,7 @@
 #{extends 'main.html' /}
 #{set title:post.title /}
 
+
 <ul id="pagination">
     #{if post.previous()}
         <li id="previous">
@@ -17,6 +18,10 @@
         </li>
     #{/if}
 </ul>
+
+#{if flash.success}
+	<p class="success">${flash.success}</p>
+#{/if}
 
 #{display post:post, as:'full' /}
 
