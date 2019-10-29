@@ -41,6 +41,13 @@
 		<textarea name="content" id="content">${params.content}</textarea>
 	</p>
 	<p>
+    <label for="code">Please type the code below: </label>
+    <img src="@{Application.captcha(randomID)}" />
+    <br />
+    <input type="text" name="code" id="code" size="18" value="${params.code}" />
+    <input type="hidden" name="randomID" value="${randomID}" />
+</p>
+	<p>
 		<input type="submit" value="Submit your comment" />
 	</p>
 #{/form}
