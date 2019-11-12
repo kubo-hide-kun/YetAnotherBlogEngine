@@ -45,12 +45,13 @@ public class Application extends Controller {
     	System.out.println("2."+content);
     	System.out.println("3."+code);
     	System.out.println("4."+randomID);
+    	System.out.println("5."+Cache.get(randomID));
     	Post post = Post.findById(postId);
     	validation.equals(
     		code, Cache.get(randomID)
     	).message("Invalid code. Please type it again");
     	if (validation.hasErrors()) {
-    		render("Application/show.html", post);
+    		render("Application/show.html", post, randomID);
     	}
     	post.addComment(author, content);
     	flash.success("Thanks for posting %s", author);
