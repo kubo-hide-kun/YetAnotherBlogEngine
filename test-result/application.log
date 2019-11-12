@@ -1,7 +1,7 @@
-15 10 2019 16:43:24,690 INFO  ~ Starting C:\Users\intern1\Documents\pleiades\workspace\Yet Another Blog Engine
-15 10 2019 16:43:24,759 WARN  ~ You're running Play! in DEV mode
-15 10 2019 16:43:24,870 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-15 10 2019 16:43:37,426 INFO  ~ HikariPool-1 - Starting...
-15 10 2019 16:43:37,445 INFO  ~ HikariPool-1 - Start completed.
-15 10 2019 16:43:37,458 INFO  ~ Connected to jdbc:h2:mem:play for default
-15 10 2019 16:43:39,184 INFO  ~ Application 'Yet Another Blog Engine' is now started !
+12 11 2019 13:00:57,248 INFO  ~ Starting C:\Users\intern1\Documents\pleiades\workspace\yabe1112
+12 11 2019 13:00:57,296 WARN  ~ You're running Play! in DEV mode
+12 11 2019 13:00:57,395 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+12 11 2019 13:01:02,008 INFO  ~ HikariPool-1 - Starting...
+12 11 2019 13:01:02,024 INFO  ~ HikariPool-1 - Start completed.
+12 11 2019 13:01:02,036 INFO  ~ Connected to jdbc:h2:mem:play for default
+12 11 2019 13:01:03,479 INFO  ~ Application 'Yet Another Blog Engine' is now started !

@@ -1,7 +1,9 @@
 package models;
 
+import javax.persistence.Entity;
 import play.db.jpa.Model;
 
+@Entity // ← この記載によりJPAヘルパを自動的に提供
 public class Tag extends Model implements Comparable<Tag>{
 	public String name;
 	private Tag(String name) {
