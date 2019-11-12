@@ -13,25 +13,33 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import play.data.validation.MaxSize;
+import play.data.validation.Required;
 import play.db.jpa.Model;
 
 @Entity
 public class Post extends Model {
 
-	public String title;
-	public Date postedAt;
+    @Required
+    public String title;
 
-	@Lob // ← 大きな文字列型DBをしようすることを宣言
-	public String content;
+    @Required
+    public Date postedAt;
 
-	@ManyToOne // ← UserClassとの関連を宣言
-	public User author;
+    @Lob
+    @Required
+    @MaxSize(10000)
+    public String content;
 
-	@OneToMany(mappedBy="post",cascade=CascadeType.ALL)
-	public List<Comment> comments;
+    @Required
+    @ManyToOne
+    public User author;
 
-	@ManyToMany(cascade=CascadeType.PERSIST)
-	public Set<Tag> tags;
+    @OneToMany(mappedBy="post", cascade=CascadeType.ALL)
+    public List<Comment> comments;
+
+    @ManyToMany(cascade=CascadeType.PERSIST)
+    public Set<Tag> tags;
 
 
 	public Post(User author, String title, String content) {
