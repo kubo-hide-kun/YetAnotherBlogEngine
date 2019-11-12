@@ -1,10 +1,12 @@
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import models.Comment;
 import models.Post;
+import models.Tag;
 import models.User;
 import play.test.Fixtures;
 import play.test.UnitTest;
@@ -148,5 +150,11 @@ public class BasicTest extends UnitTest {
 		assertEquals(1, Post.findTaggedWith("Red", "Green").size());
 		assertEquals(0, Post.findTaggedWith("Red", "Green", "Blue").size());
 		assertEquals(0, Post.findTaggedWith("Green", "Blue").size());
+
+		List<Map> cloud = Tag.getCloud();
+		assertEquals(
+		    "[{pound=1, tag=Blue}, {pound=1, tag=Green}, {pound=2, tag=Red}]",
+		    cloud.toString()
+		);
 	}
 }
