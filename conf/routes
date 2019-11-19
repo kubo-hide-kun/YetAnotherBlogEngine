@@ -19,7 +19,9 @@ GET     /favicon.ico                            404
 GET     /public/                                staticDir:public
 
 # Import CRUD routes
-*      /admin              module:crud
+GET     /admin/new                          Admin.form
+POST    /admin/new                          Admin.save
+*       /admin              module:crud
 
 # Import Secure routes
 *       /                                       module:secure
